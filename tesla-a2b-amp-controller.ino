@@ -154,9 +154,6 @@ void processInterrupt(uint16_t interrupt)
   {
     Serial.println("Slave interrupt");
   }
-
-  Serial.print("INTTYPE: ");
-  Serial.println(interrupt >> 8);
 }
 
 void setup() {
@@ -174,6 +171,8 @@ void loop() {
 
   Serial.print("SWSTAT: ");
   Serial.println(swStatus);
+  Serial.print("INTTYPE: ");
+  Serial.println(intType);
   
   if (intType == 0x00)
   {
